@@ -4,7 +4,20 @@
 /* ...
 pulls together custom stylesheets
 */
+@import "custom-base";
+@import "custom-colors";
+@import "custom-fonts";
 @import "custom-header";
 @import "custom-footer";
+@import "custom-navbar-search";
+@import "custom-facets";
+@import "custom-pagination";
+@import "custom-results";
+@import "custom-record";
+@import "custom-advanced-search";
+@import "custom-bookmarks";
+@import "custom-modal";
 @import "custom-homepage";
+@import "custom-pages";
+@import "custom-social";
 @import "custom-staff";

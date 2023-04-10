@@ -55,11 +55,12 @@ public/uploads
 /config/master.key
 /config/credentials.yml.enc
 
-notes
-cmd.txt
-docker-compose.override.yml
-fits.log
-solr_db_initialized
 public/assets
 public/universalviewer
+.DS_Store
 *~undo-tree~
+.env
+yarn-error.log
+solr/security.json
+.env_dev
+.env_production

@@ -109,7 +109,7 @@ gem 'hyrax-doi'
 gem 'rsolr', '~> 2.0'
 
 gem 'devise'
-gem 'devise-guests', '~> 0.3'
+# gem 'devise-guests', '~> 0.3'
 gem 'devise-i18n'
 gem 'devise_invitable', '~> 1.6'
 
@@ -148,3 +148,5 @@ gem 'tether-rails'
 gem 'country_select', '~> 3.1', '>= 3.1.1'
 
 gem 'font_awesome5_rails'
+
+gem 'sidekiq-failures'

@@ -90,20 +90,20 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
   property :resource_query,
            predicate: ::RDF::URI.new("https://purl.org/vra/isRelatedTo"),
            multiple: true do |index|
-    index.as :stored_searchable
+    index.as :stored_searchable, :facetable
   end
 
   # Image Metadata
 
   property :building_date,
            predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#p_temporalCoverage"),
-           multiple: false do |index|
+           multiple: true do |index|
     index.as :stored_searchable
   end
 
   property :city,
            predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#City"),
-           multiple: false do |index|
+           multiple: true do |index|
     index.as :stored_searchable, :facetable
   end
 
@@ -115,7 +115,7 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
 
   property :county,
            predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#County"),
-           multiple: false do |index|
+           multiple: true do |index|
     index.as :stored_searchable, :facetable
   end
 
@@ -127,7 +127,7 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
 
   property :neighborhood,
            predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#CitySection"),
-           multiple: false do |index|
+           multiple: true do |index|
     index.as :stored_searchable, :facetable
   end
 
@@ -150,9 +150,9 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
   end
 
   property :region,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#c_Region"),
+           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#Region"),
            multiple: false do |index|
-    index.as :stored_searchable
+    index.as :stored_searchable, :facetable
   end
 
   property :related_image,
@@ -175,7 +175,7 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
 
   property :street,
            predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#Address"),
-           multiple: false do |index|
+           multiple: true do |index|
     index.as :stored_searchable, :facetable
   end
 

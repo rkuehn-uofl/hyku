@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document  custom-base.css */
+
+
+body { margin-bottom:0; }
+
+/* hide breadcrumbs - they only appear on item display and then only give link back to home */
+.public-facing nav.breadcrumb { display:none; }
+
+nav.navbar.navbar-default.navbar-static-top > .container > .row { margin-top:-1px; }
+nav li.active { outline: 1px dotted white; }
+
+
+
+/* override ruby gem which displays text "Too many items, can not select all." ADA issues */
+#check_all:disabled:hover:before { content:none; }
+
+
+/* override line 57, /home/deploy/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/mixins/_forms.scss */
+.form-control:focus { outline:1px dotted black; }
+
+/* override line 26, /home/deploy/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_dropdowns.scss */
+.dropdown-toggle:focus { outline:1px dotted black; }
+
+/* override line 204, /home/deploy/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-toggle:focus, .facets-toggle:focus {outline:1px dotted black;}
+
+/* override line 119, /home/deploy/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_carousel.scss */
+.carousel-control:hover, .carousel-control:focus {outline:1px dotted black;}
+
+#canary-tool-tip { display:none; }
+
+
+@media (min-width:1200px) { 
+	#header-navbar .container, 
+	nav.navbar-static-top .container, 
+	#content-wrapper.container { width:100%; }
+
+	div#content-wrapper.container { padding:0 8rem 4rem; }
+
+	#sidebar { padding-right:4rem; }
+
+}

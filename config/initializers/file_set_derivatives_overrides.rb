@@ -21,7 +21,7 @@ Hyrax::FileSetDerivativesService.class_eval do
     Hydra::Derivatives::DocumentDerivatives.create(filename,
                                                    outputs: [{
                                                      label: :thumbnail, format: 'jpg',
-                                                     size: '600x450>',
+                                                     size: '240x180>',
                                                      url: derivative_url('thumbnail'),
                                                      layer: 0
                                                    }])
@@ -33,9 +33,9 @@ Hyrax::FileSetDerivativesService.class_eval do
     Hydra::Derivatives::ImageDerivatives.create(filename,
                                                 outputs: [{ label: :thumbnail,
                                                             format: 'jpg',
-                                                            size: '600x450>',
+                                                            size: '240x180>',
                                                             url: derivative_url('thumbnail'),
                                                             layer: 0 }])
   end
-  
+
 end
