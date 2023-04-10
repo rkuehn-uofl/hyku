@@ -15,14 +15,19 @@ en:
           depositor_ssim: Depositor
           keyword_sim: Keyword
           language_sim: Language
+          material_sim: Material
           media_type_sim: Media Type
           neighborhood_sim: Neighborhood
-          people_represented_sim: People Represented
+          people_represented_sim: People
           publisher_sim: Repository
+          region_sim: Region
           resource_query_sim: Resource Query
           resource_type_sim: Object Type
+          rights_statement_sim: Rights Statement
           street_sim: Street
+          style_sim: Style
           subject_sim: Subject
+          technique_sim: Technique
         index:
           location_tesim: Location
           city_tesim: City
@@ -40,16 +45,19 @@ en:
           keyword_tesim: Keyword
           language_tesim: Language
           license_tesim: License
+          material_tesim: Material
           media_type_tesim: Media Type
           neighborhood_tesim: Neighborhood
-          people_represented_tesim: People Represented
+          people_represented_tesim: People
           publisher_tesim: Repository
+          region_tesim: Region
           resource_query_tesim: Resource Query
           resource_type_tesim: Object Type
           rights_statement_tesim: Rights Statement
-          rights_tesim: Rights
           street_tesim: Street
+          style_tesim: Style
           subject_tesim: Subject
+          technique_tesim: Technique
         show:
           location_tesim: Location
           city_tesim: City
@@ -66,13 +74,18 @@ en:
           identifier_tesim: Item Number
           keyword_tesim: Keyword
           language_tesim: Language
+          material_tesim: Material
+          media_type_tesim: Media Type
           neighborhood_tesim: Neighborhood
-          people_represented_tesim: People Represented
+          people_represented_tesim: People
           publisher_tesim: Repository
+          region_tesim: Region
           resource_query_tesim: Resource Query
-          rights_tesim: Rights
+          rights_statement_tesim: Rights Statement
           subject_tesim: Subject
           street_tesim: Street
+          style_tesim: Style
+          technique_tesim: Technique
           title_tesim: Title
 
     bookmarks:

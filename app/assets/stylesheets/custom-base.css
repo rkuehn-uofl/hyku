@@ -8,14 +8,8 @@ body { margin-bottom:0; }
 .public-facing nav.breadcrumb { display:none; }
 
 nav.navbar.navbar-default.navbar-static-top > .container > .row { margin-top:-1px; }
+nav li.active { outline: 1px dotted white; }
 
-
-.btn:active, 
-.facets-toggle:active, 
-td.toggle input[type=submit]:active, 
-.btn.active, 
-.active.facets-toggle, 
-td.toggle input.active[type=submit] { outline: 1px dotted black; }
 
 
 /* override ruby gem which displays text "Too many items, can not select all." ADA issues */
@@ -34,3 +28,16 @@ td.toggle input.active[type=submit] { outline: 1px dotted black; }
 /* override line 119, /home/deploy/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_carousel.scss */
 .carousel-control:hover, .carousel-control:focus {outline:1px dotted black;}
 
+#canary-tool-tip { display:none; }
+
+
+@media (min-width:1200px) { 
+	#header-navbar .container, 
+	nav.navbar-static-top .container, 
+	#content-wrapper.container { width:100%; }
+
+	div#content-wrapper.container { padding:0 8rem 4rem; }
+
+	#sidebar { padding-right:4rem; }
+
+}

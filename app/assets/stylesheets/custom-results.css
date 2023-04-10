@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document  custom-results.css */
+
+
+form.bookmark_toggle { display:none; }
+
+
+.search-widgets { text-align:right; }
+
+
+.search-results-title-row { 
+  display:flex; 
+  justify-content: space-between; 
+  align-items:center; 
+  margin-bottom:1rem; 
+}
+
+.document span.label { display:none; }
+
+#documents { margin-bottom:3rem; }
+
+
+#documents.documents-list .col-md-2, 
+#documents.documents-list .col-md-6 {
+  padding-left:0; 
+}
+
+#documents.documents-list .col-md-6 { width:83.3333333%; }
+
+#documents.documents-list .list-thumbnail, 
+#documents.documents-list .metadata {
+  width:100%; 
+}
+
+#documents.documents-list .metadata .dl-horizontal dd:nth-of-type(2) {
+	white-space:nowrap;
+	overflow:hidden; 
+	text-overflow:ellipsis; 
+	width:calc(100% - 160px);
+}
+
+
+#documents .document { 
+	margin-top:6px;
+	padding-top:6px;
+	border-bottom: 1px dotted #ddd;
+}
+#documents.documents-list .document:last-of-type { border-bottom:none; }
+
+.gallery .document { min-height:unset;}
+
+.document .caption dl { 
+	margin-bottom:0; 
+	display:flex;
+	flex-direction:column; 
+	align-items:center;
+}
+
+.catalog .list-thumbnail img { margin-bottom: 1rem; }
+
+
+#documents.gallery dt, 
+#documents.gallery .blacklight-description_tesim, 
+#documents.gallery .blacklight-subject_tesim, 
+#documents.gallery .blacklight-date_created_tesim
+ { display:none; } 
+
+@media (max-width:767.99px) {
+	#documents .document { 
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.search-results-title-row { width:100%; }
+	#documents.documents-list .col-md-2 { width:40%; padding-right:5%;} 
+	#documents.documents-list .col-md-6 { width:55%; }
+
+	#documents.documents-list .metadata .dl-horizontal dd:nth-of-type(2) { width:unset; }
+	
+
+	.list-thumbnail { margin-bottom:20px; }
+
+}
+
+
+@media (min-width:768px) {
+
+	.catalog-index .metadata dl.dl-horizontal { 
+		display:grid; 
+		grid-template-columns: 10rem 1fr; 
+		grid-column-gap: 2rem; 
+	}
+	.catalog-index .metadata dl.dl-horizontal dt { 
+		width:fit-content;
+		float:none;
+		text-overflow:unset;
+		overflow:unset;
+	}
+	.catalog-index .metadata dl.dl-horizontal dd { margin-left:0;}
+
+
+	#documents.gallery .document { max-width: 290px; }
+
+
+
+}
+
+@media (min-width:980px) {
+	div#sortAndPerPage {
+		display:grid; 
+		grid-template-columns: 0 50% 1fr;
+	}
+
+}

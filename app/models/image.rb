@@ -90,7 +90,7 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
   property :resource_query,
            predicate: ::RDF::URI.new("https://purl.org/vra/isRelatedTo"),
            multiple: true do |index|
-    index.as :stored_searchable
+    index.as :stored_searchable, :facetable
   end
 
   # Image Metadata
@@ -116,7 +116,7 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
   property :county,
            predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#County"),
            multiple: true do |index|
-    index.as :stored_searchable
+    index.as :stored_searchable, :facetable
   end
 
   property :invoice_information,
@@ -150,9 +150,9 @@ class Image < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
   end
 
   property :region,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#c_Region"),
+           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#Region"),
            multiple: false do |index|
-    index.as :stored_searchable
+    index.as :stored_searchable, :facetable
   end
 
   property :related_image,

@@ -1,6 +1,34 @@
 /* production custom-facets */
 
 
+.staff #facets .panel-default > .panel-heading, 
+body.public-facing #facets .panel-default > .panel-heading { 
+  border-radius:4px; 
+  padding:.8rem;
+}
+
+h3.panel-title.facet-field-heading { line-height:1; }
+
+#facets .panel-title a { text-transform:uppercase; }
+
+
+.panel-heading.collapse-toggle .panel-title:after {
+	content:"\e080"; 
+	transform: rotate(-90deg);
+}
+.panel-heading.collapse-toggle.collapsed .panel-title:after { 
+	transform:rotate(90deg);
+}
+
+
+.facet-values li { 
+  display:flex;
+  justify-content: space-between;
+}
+.facet-values .facet-count { width:5em!important; }
+
+
+
 @media (max-width:767.99px) { 
 
   #sidebar, 
@@ -14,7 +42,6 @@
   #facets .top-panel-heading {
     padding-left:1rem; 
   }
-  #facets .facets-toggle { background-color:#555; }
 }
 
 @media (min-width:768px) { 
@@ -35,7 +62,6 @@
 
 
 
-.appliedFilter span:hover { color:black; }
 
 .view-type-group.btn-group > .btn:nth-of-type(2):not(.dropdown-toggle) {
   border-bottom-right-radius:4px;
@@ -43,7 +69,6 @@
 }
 
 #appliedParams { 
-  font-family:'Open Sans', Arial, sans-serif; 
   display:flex;
   align-items: center;
   justify-content: flex-start;
