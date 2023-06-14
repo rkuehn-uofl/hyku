@@ -3,8 +3,7 @@
 class SetDefaultParentThumbnailJob < ApplicationJob
   queue_as :import
 
-  def perform(parent_work:, importer_run_id:)
-    importer_run = Bulkrax::ImporterRun.find(importer_run_id)
+  def perform(parent_work:, importer_run_id: nil)
     parent_work.reload
     return if parent_work.thumbnail.present?
 
@@ -23,9 +22,9 @@ class SetDefaultParentThumbnailJob < ApplicationJob
     parent_work.thumbnail = child_file_set
     parent_work.save
     # rubocop:disable Rails/SkipsModelValidations
-    importer_run.increment!(:processed_parent_thumbnails)
+    Bulkrax::ImporterRun.find(importer_run_id).increment!(:processed_parent_thumbnails) if importer_run_id.present?
   rescue ::StandardError => e
-    importer_run.increment!(:failed_parent_thumbnails)
+    Bulkrax::ImporterRun.find(importer_run_id).increment!(:failed_parent_thumbnails) if importer_run_id.present?
     # rubocop:enable Rails/SkipsModelValidations
     Bulkrax::Entry.find_by(identifier: parent_work.identifier.first).status_info(e) if parent_work
   end
