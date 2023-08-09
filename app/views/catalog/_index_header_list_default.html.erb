@@ -1,4 +1,7 @@
 <%# OVERRIDE Hyrax 2.9 to support shared search %>
+<%# ADA - Added screen reader span with document id %>
 <div class="search-results-title-row">
-  <h4 class="search-result-title"><%= link_to document.title_or_label, generate_work_url(document, request) %></h4>
+  <h4 class="search-result-title">
+    <%= link_to "#{document.title_or_label} <span class='sr-only'>#{document.id}</span>".html_safe, generate_work_url(document, request) %>
+  </h4>
 </div>

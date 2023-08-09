@@ -40,29 +40,16 @@ module Hyrax
 
     self.terms += %i[
       people_represented
-      biography_of_contributor
-      cataloguing_note
-      condition
-      contributor_description
-      contributor_history
       cultural_context
-      data_source
-      exhibit_history
       extent
-      honoree
       language_script
-      location_of_contributor
-      location_of_honoree
       material
-      measurement
-      object_location
       ornamentation
       place_original
       related_image
       style
       technique
       transcription_translation
-      type_of_honoree
     ]
   end
 end

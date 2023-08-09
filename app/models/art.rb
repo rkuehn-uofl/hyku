@@ -100,61 +100,9 @@ class Art < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
 
   # Art Metadata
 
-  property :biography_of_contributor,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#p_credits"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :cataloguing_note,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#c_DescriptionConventions"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :condition,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#historyNote"),
-           multiple: true do |index|
-    index.as :stored_searchable
-  end
-
-  property :contributor_description,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#c_Summary"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :contributor_history,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#p_historyOfWork"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
   property :cultural_context,
            predicate: ::RDF::URI.new("https://purl.org/vra/culturalContext"),
            multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :data_source,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#p_references"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :exhibit_history,
-           predicate: ::RDF::URI.new("https://purl.org/vra/exhibitedAt"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :honoree,
-           predicate: ::RDF::URI.new("https://purl.org/vra/designedFor"),
-           multiple: true do |index|
-    index.as :stored_searchable
-  end
-
-  property :honoree, predicate: ::RDF::URI.new("https://purl.org/vra/designedFor"), multiple: true do |index|
     index.as :stored_searchable
   end
 
@@ -164,39 +112,15 @@ class Art < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
     index.as :stored_searchable
   end
 
-  property :location_of_contributor,
-           predicate: ::RDF::URI.new("https://purl.org/vra/placeOfCreation"),
-           multiple: true do |index|
-    index.as :stored_searchable
-  end
-
-  property :location_of_honoree,
-           predicate: ::RDF::URI.new("https://purl.org/vra/locationOf"),
-           multiple: true do |index|
-    index.as :stored_searchable
-  end
-
   property :material,
            predicate: ::RDF::URI.new("https://purl.org/vra/material"),
            multiple: true do |index|
     index.as :stored_searchable, :facetable
   end
 
-  property :measurement,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#p_dimensions"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :object_location,
-           predicate: ::RDF::URI.new("https://purl.org/vra/placeOfOwnership"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
   property :ornamentation,
            predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/bibframe.html#p_illustrativeContent"),
-           multiple: true do |index|
+           multiple: false do |index|
     index.as :stored_searchable
   end
 
@@ -226,12 +150,6 @@ class Art < ActiveFedora::Base # rubocop:disable Metrics/ClassLength
 
   property :transcription_translation,
            predicate: ::RDF::URI.new("https://schema.org/translationOfWork"),
-           multiple: false do |index|
-    index.as :stored_searchable
-  end
-
-  property :type_of_honoree,
-           predicate: ::RDF::URI.new("https://id.loc.gov/ontologies/madsrdf/v1.html#hasAffiliation"),
            multiple: false do |index|
     index.as :stored_searchable
   end

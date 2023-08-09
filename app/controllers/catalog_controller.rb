@@ -38,7 +38,7 @@ class CatalogController < ApplicationController
       suggester_name: 'iiifSuggester'
     }
 
-    config.view.gallery.partials = %i[index_header index]
+    # config.view.gallery.partials = %i[index_header index]
     # config.view.masonry.partials = [:index]
     # config.view.slideshow.partials = [:index]
 
@@ -193,27 +193,14 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name('resource_query', :stored_searchable)
 
     # Art Work type
-    config.add_show_field solr_name('honoree', :stored_searchable)
-    config.add_show_field solr_name('type_of_honoree', :stored_searchable)
-    config.add_show_field solr_name('location_of_honoree', :stored_searchable)
-    config.add_show_field solr_name('location_of_contributor', :stored_searchable)
-    config.add_show_field solr_name('biography_of_contributor', :stored_searchable)
-    config.add_show_field solr_name('contributor_history', :stored_searchable)
-    config.add_show_field solr_name('contributor_description', :stored_searchable)
     config.add_show_field solr_name('transcription_translation', :stored_searchable)
     config.add_show_field solr_name('style', :stored_searchable)
     config.add_show_field solr_name('technique', :stored_searchable)
     config.add_show_field solr_name('material', :stored_searchable)
-    config.add_show_field solr_name('measurement', :stored_searchable)
     config.add_show_field solr_name('cultural_context', :stored_searchable)
     config.add_show_field solr_name('language_script', :stored_searchable)
     config.add_show_field solr_name('place_original', :stored_searchable)
     config.add_show_field solr_name('ornamentation', :stored_searchable)
-    config.add_show_field solr_name('exhibit_history', :stored_searchable)
-    config.add_show_field solr_name('data_source', :stored_searchable)
-    config.add_show_field solr_name('cataloguing_note', :stored_searchable)
-    config.add_show_field solr_name('object_location', :stored_searchable)
-    config.add_show_field solr_name('condition', :stored_searchable)
 
     # Image Work Type
     config.add_show_field solr_name('city', :stored_searchable)

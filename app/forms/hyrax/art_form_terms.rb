@@ -9,17 +9,10 @@ module Hyrax
     def primary_terms
       super + %i[
         alternative_title
-        honoree
-        type_of_honoree
-        location_of_honoree
         creator
         creator_role
         contributor
         contributor_role
-        location_of_contributor
-        biography_of_contributor
-        contributor_history
-        contributor_description
         description
         transcription_translation
         subject
@@ -27,7 +20,6 @@ module Hyrax
         technique
         material
         ornamentation
-        measurement
         cultural_context
         keyword
         language
@@ -36,11 +28,6 @@ module Hyrax
         place_original
         date_created
         resource_type
-        exhibit_history
-        data_source
-        cataloguing_note
-        object_location
-        condition
         source
         related_image
         collection_information

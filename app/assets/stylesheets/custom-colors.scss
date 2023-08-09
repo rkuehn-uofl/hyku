@@ -7,6 +7,18 @@ a:focus,
 	outline:2px dotted #333!important; 
 	outline-offset: 2px!important;
 }
+.our_footer a:focus, .our_footer a:active, 
+#uofl_footer a:focus, #uofl_footer a:active, 
+#header-row1 a:focus, #header-row1 a:active 
+ {
+	outline:3px dotted #fff!important; 
+	outline-offset: 3px!important;
+	color:#fff!important;
+}
+
+  .panel-heading:focus { outline-offset: .25rem; }
+  .panel-heading a:focus {outline-offset: 1.2rem; }
+
 
 
 #content-wrapper a, 
@@ -90,7 +102,6 @@ a:focus,
   }
 
 
-  #content-wrapper nav.breadcrumb li.active { outline:none; }
   
   
   
@@ -408,12 +419,6 @@ footer a:hover { background-color:#ad0000; color:white; text-decoration:none; }
 	}
 
 
-  .panel-heading:focus { outline-offset: .25rem; }
-  .panel-heading a:focus {outline-offset: 1.2rem; }
 
-footer a:focus { 
-	outline: 1px dotted white;
-	color:white!important;
-}
 
 
